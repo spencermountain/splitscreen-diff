@@ -1,7 +1,7 @@
 {
   "name": "splitscreen-diff",
   "version": "0.0.1",
-  "description": "side-by-side plaintext diff viewer CLI",
+  "description": "side-by-side plaintext diff CLI",
   "repository": "github:spencermountain/splitscreen-diff",
   "author": "Spencer Kelly <spencermountain@gmail.com> (https://spencermountain.dev)",
   "minimumReleaseAge": "1 day",
@@ -44,13 +44,13 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-replace": "^6.0.3",
     "diff": "^9.0.0",
-    "eslint": "10.11.0",
+    "eslint": "10.14.0",
     "htm": "^3.1.1",
     "ink": "^8.0.0",
     "react": "^19.3.1",
     "rollup": "^4.67.4",
     "string-width": "^8.3.0",
-    "tap-dancer": "0.4.2",
+    "tap-dancer": "0.4.4",
     "tape": "^5.10.2"
   },
   "license": "MIT"
