@@ -1,0 +1,48 @@
+{
+  "name": "splitscreen-diff",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "repository": "github:spencermountain/splitscreen-diff",
+  "author": "Spencer Kelly <spencermountain@gmail.com> (https://spencermountain.dev)",
+  "minimumReleaseAge": "1 day",
+  "scripts": {
+    "build": "rollup -c --silent",
+    "test": "tape \"tests/*.test.js\" | tap-dancer",
+    "watch": "node --watch scratch.js",
+    "lint": "eslint ."
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "splitscreen-diff": "./bin/splitscreen-diff.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "builds",
+    "types"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "dependencies": {
+    "diff": "^9.0.0",
+    "htm": "^3.1.1",
+    "ink": "^8.0.0",
+    "react": "^19.3.1",
+    "string-width": "^8.3.0"
+  },
+  "devDependencies": {
+    "eslint": "10.11.0",
+    "tap-dancer": "0.4.2",
+    "tape": "^5.10.2"
+  },
+  "license": "MIT"
+}
