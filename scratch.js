@@ -27,5 +27,5 @@ Snowmelt from the Rockies feeds the Colorado, the Missouri, the Rio Grande, and 
 
 The end.`
 
-await diff(before, after, { titles: ['before', 'after'] })
+await diff(before, after)
 console.log('closed')

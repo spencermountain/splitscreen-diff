@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { readFileSync } from 'node:fs'
 import process from 'node:process'
-import diff from '../src/index.js'
+import diff from '../builds/splitscreen-diff.mjs'
 
 const args = process.argv.slice(2)
 if (args.length !== 2 || args.includes('--help') || args.includes('-h')) {

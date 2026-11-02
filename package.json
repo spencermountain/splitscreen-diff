@@ -1,19 +1,25 @@
 {
   "name": "splitscreen-diff",
-  "private": true,
   "version": "0.0.1",
-  "description": "",
+  "description": "side-by-side plaintext diff viewer CLI",
   "repository": "github:spencermountain/splitscreen-diff",
   "author": "Spencer Kelly <spencermountain@gmail.com> (https://spencermountain.dev)",
   "minimumReleaseAge": "1 day",
   "scripts": {
     "build": "rollup -c --silent",
+    "prepublishOnly": "npm run build && npm test",
     "test": "tape \"tests/*.test.js\" | tap-dancer",
     "watch": "node --watch scratch.js",
     "lint": "eslint ."
   },
+  "keywords": [
+    "diff",
+    "splitscreen",
+    "side-by-side"
+  ],
   "type": "module",
-  "main": "src/index.js",
+  "main": "builds/splitscreen-diff.mjs",
+  "types": "types/index.d.ts",
   "bin": {
     "splitscreen-diff": "./bin/splitscreen-diff.js"
   },
@@ -24,7 +30,7 @@
     "types"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "prettier": {
     "trailingComma": "none",
@@ -32,15 +38,18 @@
     "singleQuote": true,
     "printWidth": 100
   },
-  "dependencies": {
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-replace": "^6.0.3",
     "diff": "^9.0.0",
+    "eslint": "10.11.0",
     "htm": "^3.1.1",
     "ink": "^8.0.0",
     "react": "^19.3.1",
-    "string-width": "^8.3.0"
-  },
-  "devDependencies": {
-    "eslint": "10.11.0",
+    "rollup": "^4.67.4",
+    "string-width": "^8.3.0",
     "tap-dancer": "0.4.2",
     "tape": "^5.10.2"
   },

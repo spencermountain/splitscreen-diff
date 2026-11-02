@@ -1,6 +1,6 @@
 <div align="center">
   <div><b>splitscreen-diff</b></div>
-  <div>CLI plaintext diff viewer</div>
+  <div>two-pane plaintext diff viewer</div>
   <div><code>npm install splitscreen-diff</code></div>
   <div align="center">
     <sub>
@@ -24,12 +24,14 @@
 <!-- spacer -->
 <img height="20px" src="https://user-images.githubusercontent.com/399657/68221862-17ceb980-ffb8-11e9-87d4-7b30b6488f16.png"/>
 
+<img width="1620" height="1252" alt="Image" src="https://github.com/user-attachments/assets/9c09d144-cd8c-4af1-b3d0-8042f6244e99" />
+
 ### Usage
 
 ```js
 import diff from 'splitscreen-diff'
 
-await diff(textA, textB, { titles: ['before', 'after'] })
+await diff(textA, textB)
 // resolves when the viewer is closed
 ```
 
@@ -37,13 +39,13 @@ the original text sits on the left, the new text on the right —
 new text in <b>green</b>, deleted text as a <b>dim red block</b> the same shape as what's missing.
 both panes share one scrollbar, so you're always looking at the same spot in each.
 
-| keys | |
-| --- | --- |
-| `↑`/`↓` or `j`/`k` | scroll |
-| `space`/`b` or `pgup`/`pgdn` | page |
-| `n` / `p` | next / previous change |
-| `g` / `G` | top / bottom |
-| `q` / `esc` | quit |
+| keys                         |                        |
+| ---------------------------- | ---------------------- |
+| `↑`/`↓` or `j`/`k`           | scroll                 |
+| `space`/`b` or `pgup`/`pgdn` | page                   |
+| `n` / `p`                    | next / previous change |
+| `g` / `G`                    | top / bottom           |
+| `q` / `esc`                  | quit                   |
 
 when stdout isn't a tty, it prints the aligned diff once and resolves immediately.
 
